@@ -24,6 +24,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Conda dependency scanning
         uses: jhutchings1/conda-dependency-submission-action@v0.0.2
-```        
+```    
+    
 # License
 This project is licensed under the terms of the MIT open source license. Please refer to [MIT](LICENSE.md) for the full terms.
