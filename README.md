@@ -38,3 +38,6 @@ jobs:
       with:
         filePath: "_manifest/spdx_2.2/"
 ```        
+
+# License
+This project is licensed under the terms of the MIT open source license. Please refer to [MIT](LICENSE.md) for the full terms.
