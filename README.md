@@ -21,7 +21,7 @@ jobs:
   dependency-submission:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Conda dependency scanning
-        uses: jhutchings1/conda-dependency-submission-action@v0.0.2
+        uses: jhutchings1/conda-dependency-submission-action@v0.0.3
 ```        
