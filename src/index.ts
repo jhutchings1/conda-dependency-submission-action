@@ -11,14 +11,18 @@ import {
 } from '@github/dependency-submission-toolkit';
 
 import CondaParser from './condaParser';
+import { version } from '../package.json';
 
 async function run() {
+  const treatAsPython = core.getBooleanInput('treatAsPython');
   let manifests = CondaParser.getManifestsFromEnvironmentFiles(
-    CondaParser.searchFiles(core.getInput('filePath'), core.getInput('filePattern')));
+    CondaParser.searchFiles(core.getInput('filePath'), core.getInput('filePattern')),
+    { treatAsPython }
+  );
   
   let snapshot = new Snapshot({
       name: "conda-dependency-submission-action",
-      version: "0.0.1",
+      version: version,
       url: "https://github.com/jhutchings1/conda-dependency-submission-action",
   }, 
   github.context,
